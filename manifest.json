@@ -1,0 +1,40 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon16.png",
+         "32": "icons/icon32.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "PromptBox"
+   },
+   "background": {
+      "service_worker": "background/service-worker.js",
+      "type": "module"
+   },
+   "commands": {
+      "_execute_action": {
+         "description": "PromptBox'u aç",
+         "suggested_key": {
+            "default": "Alt+P"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "content/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Promptlarınızı kaydedin, kategorilere ayırın ve tek tıkla yapıştırın.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuDgAJhK2nti0rjxOYqB5nraRnDjKKzLvQS/E5qHElM+kdBgYRf6sARnimk0HC8+MpsRYNddpHaBJ+GCfHWDH2IWHcokUq56RpTHTQ1zXdAsfpm95nPht7zTjhi8F+GnnnuMnaVF+LRI/YCeAmDcuVri/kC0DaGNK+6S+spEO8bCXDojNa/oXK4wRPK/7Gd4T9yHLVp/iZ9BQenmWrl86nO0FMyjpNWS3nU5xKyoc74MQrJGHemy25Uq4pLQX6mo2CYLDoR3cPyv+CVeyydw8d2nxgF2u3EmKhYVr9HIyFDSDgQ5P4Pfbcax84GgmtwnPj53C0i5dkUtLBIS52lLBoQIDAQAB",
+   "manifest_version": 3,
+   "name": "PromptBox",
+   "permissions": [ "storage", "contextMenus", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

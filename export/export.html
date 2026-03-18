@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptBox - Promptlarım</title>
+  <link rel="stylesheet" href="export.css">
+</head>
+<body>
+  <div class="toolbar no-print">
+    <div class="toolbar-left">
+      <img src="../icons/icon32.png" alt="PromptBox" class="toolbar-icon">
+      <span class="toolbar-title">PromptBox Dışa Aktar</span>
+    </div>
+    <button class="toolbar-btn" id="print-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      PDF Olarak İndir
+    </button>
+  </div>
+
+  <div class="page" id="content">
+    <!-- Filled by JS -->
+  </div>
+
+  <script src="export.js" type="module"></script>
+</body>
+</html>
